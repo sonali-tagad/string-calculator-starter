@@ -4,17 +4,13 @@ class StringCalculator {
 
     public int add(String input) {
         String[] arr = input.split(",");
-        if (input == null) {
-            return 0;
-        }
-        else {
+        int sum = 0;
             for (String element : arr) {
-                if (!element.isEmpty()) {
-                    Integer.parseInt(element);
+                if (!element.trim().isEmpty()) {
+                    sum = sum + Integer.parseInt(element);
                 }
             }
-        }
-        return 1;
+        return sum;
     }
 
 }
